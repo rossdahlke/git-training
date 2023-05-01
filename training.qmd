@@ -1,0 +1,41 @@
+---
+title: "Git Training"
+author: "Ross Dahlke"
+format: html
+editor: visual
+---
+
+# Git Training
+
+Welcome to Git training! Git is one of the most powerful and useful programming fundamentals. However, it is seldom taught in school, especially as a part of a social science research programs. In this document, I hope to get you started on your own Git journey. This document will certainly not cover everything related to Git but just a few commands can provide **a lot** of value. When starting out, I found it most useful to use it alongside a tutorial until I really felt comfortable with it. I hope that this document can be that tutorial for you.
+
+## Why Git?
+
+Git is a version control system that makes programming faster, more collaborative, and improves data integrity. The big idea is that you can periodically save your code in a certain spot so that you, or a collaborator, can easy track changes and restore older versions. It also allows you get experimental. If you want to try out a crazy idea but you don't want to mess up the existing code, no problem! That's what Git is here for.
+
+Git is all about connecting versions of code that are stored in the central repository (let's just call it the cloud) and your local computer.
+
+If you want another explanation of Git, my programmer friends who are way smarter than me swear by the video [Git for Ages 4 And Up](https://www.youtube.com/watch?v=1ffBJ4sVUb4&ab_channel=HackersOnBoard)
+
+### Git Clients
+
+There are a variety of Git "clients" out there, including GitHub, GitKraken, Bitbucket, etc. In this tutorial, I will be showing how to use GitHub with the *command line*. GitHub does have a [desktop application](https://desktop.github.com/) which can abstract the use of the command line, but I personally prefer being a little bit more "hands-on" to what is happening under the hood. If there's interest, I'm happy to create a tutorial using the GitHub Desktop app. Other Git storage systems, for example, Bitbucket, can be used similarly this tutorial.
+
+## GitHub
+
+### Starting with GitHub
+
+1.  Create a [GitHub](https://github.com/) account
+2.  Configure your [SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
+
+### Creating a new repository
+
+1.  Go to your GitHub [homepage](https://github.com/)
+2.  On the left menu "Top Repositories" click the "New" button
+3.  Give your repository a name and fill out the remaining details
+4.  Congratulations, you just made a new repository! Right now, the repository only exists in the cloud.
+
+### Updating a repository
+
+1.  Go to the GitHub page of your repository (e.g., [github.com/rossdahlke/git-training](github.com/rossdahlke/git-training))
+2.  If you do not have the repository downloaded on your local computer, click on the "Code" dropdown, click on "SSH" and copy the git address (e.g., \`git\@github.com:rossdahlke/git-training.git\`)
