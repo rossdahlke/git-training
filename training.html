@@ -38,10 +38,32 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="fullcontent">
+<body>
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
-
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#intro-to-git-training" id="toc-intro-to-git-training" class="nav-link active" data-scroll-target="#intro-to-git-training">Intro to Git Training</a>
+  <ul class="collapse">
+  <li><a href="#why-git" id="toc-why-git" class="nav-link" data-scroll-target="#why-git">Why Git?</a>
+  <ul class="collapse">
+  <li><a href="#git-clients" id="toc-git-clients" class="nav-link" data-scroll-target="#git-clients">Git Clients</a></li>
+  </ul></li>
+  <li><a href="#github" id="toc-github" class="nav-link" data-scroll-target="#github">GitHub</a>
+  <ul class="collapse">
+  <li><a href="#starting-with-github" id="toc-starting-with-github" class="nav-link" data-scroll-target="#starting-with-github">Starting with GitHub</a></li>
+  <li><a href="#creating-a-new-repository" id="toc-creating-a-new-repository" class="nav-link" data-scroll-target="#creating-a-new-repository">Creating a new repository</a></li>
+  <li><a href="#downloading-a-repository" id="toc-downloading-a-repository" class="nav-link" data-scroll-target="#downloading-a-repository">Downloading a repository</a></li>
+  <li><a href="#sending-a-repository-back-up" id="toc-sending-a-repository-back-up" class="nav-link" data-scroll-target="#sending-a-repository-back-up">Sending a repository back up</a></li>
+  <li><a href="#getting-updates-to-a-repository-that-someone-else-pushed" id="toc-getting-updates-to-a-repository-that-someone-else-pushed" class="nav-link" data-scroll-target="#getting-updates-to-a-repository-that-someone-else-pushed">Getting updates to a repository that someone else pushed</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+</div>
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
@@ -67,8 +89,8 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="git-training" class="level1">
-<h1>Git Training</h1>
+<section id="intro-to-git-training" class="level1">
+<h1>Intro to Git Training</h1>
 <p>Welcome to Git training! Git is one of the most powerful and useful programming fundamentals. However, it is seldom taught in school, especially as a part of a social science research programs. In this document, I hope to get you started on your own Git journey. This document will certainly not cover everything related to Git but just a few commands can provide <strong>a lot</strong> of value. When starting out, I found it most useful to use it alongside a tutorial until I really felt comfortable with it. I hope that this document can be that tutorial for you.</p>
 <section id="why-git" class="level2">
 <h2 class="anchored" data-anchor-id="why-git">Why Git?</h2>
@@ -86,23 +108,119 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="starting-with-github">Starting with GitHub</h3>
 <ol type="1">
 <li>Create a <a href="https://github.com/">GitHub</a> account</li>
-<li>Configure your <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account">SSH key</a></li>
+<li>Configure your <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account">SSH key</a>
+<ol type="1">
+<li><p>Open your terminal and check to see if you already have an SSH key using the command <code>ssh-add -l</code></p></li>
+<li><p>If you do not, use the command</p>
+<pre><code>ssh-keygen -t ed25519 -C "your_email@example.com"</code></pre></li>
+<li><p>Press enter to use the default location</p></li>
+<li><p>Enter secure passphrase (or click enter for none)</p></li>
+<li><p>Use the command <code>cat .ssh/id_rsa.pub</code> to show your public key</p></li>
+<li><p>Copy that key to your clipboard</p></li>
+<li><p>Log into GitHub</p></li>
+<li><p>Click on settings</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="/images/settings.png" class="img-fluid figure-img" style="width:30.0%"></p>
+<p></p><figcaption class="figure-caption">settings</figcaption><p></p>
+</figure>
+</div></li>
+<li><p>Select SSH and GPG keys</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="/images/ssh%20keys.png" class="img-fluid figure-img" style="width:40.0%"></p>
+<p></p><figcaption class="figure-caption">ssh keys button</figcaption><p></p>
+</figure>
+</div></li>
+<li><p>Click New SSH Key</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="/images/new%20ssh%20key.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">new ssh key</figcaption><p></p>
+</figure>
+</div></li>
+<li><p>Give your key a title</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="/images/new%20ssh%20key.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">ssh fields</figcaption><p></p>
+</figure>
+</div></li>
+<li><p>Paste your public key into the Key field</p></li>
+<li><p>Click Add SSH Key</p></li>
+</ol></li>
 </ol>
 </section>
 <section id="creating-a-new-repository" class="level3">
 <h3 class="anchored" data-anchor-id="creating-a-new-repository">Creating a new repository</h3>
 <ol type="1">
-<li>Go to your GitHub <a href="https://github.com/">homepage</a></li>
-<li>On the left menu “Top Repositories” click the “New” button</li>
-<li>Give your repository a name and fill out the remaining details</li>
-<li>Congratulations, you just made a new repository! Right now, the repository only exists in the cloud.</li>
+<li><p>Go to your GitHub <a href="https://github.com/">homepage</a></p></li>
+<li><p>On the left menu “Top Repositories” click the “New” button</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="/images/new_repo.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<p></p><figcaption class="figure-caption">Create a new repository</figcaption><p></p>
+</figure>
+</div></li>
+<li><p>Give your repository a name and fill out the remaining details</p></li>
+<li><p>Congratulations, you just made a new repository! Right now, the repository only exists in the cloud.</p></li>
 </ol>
 </section>
-<section id="updating-a-repository" class="level3">
-<h3 class="anchored" data-anchor-id="updating-a-repository">Updating a repository</h3>
+<section id="downloading-a-repository" class="level3">
+<h3 class="anchored" data-anchor-id="downloading-a-repository">Downloading a repository</h3>
 <ol type="1">
-<li>Go to the GitHub page of your repository (e.g., <a href="github.com/rossdahlke/git-training">github.com/rossdahlke/git-training</a>)</li>
-<li>If you do not have the repository downloaded on your local computer, click on the “Code” dropdown, click on “SSH” and copy the git address (e.g., `git@github.com:rossdahlke/git-training.git`)</li>
+<li><p>Go to the GitHub page of your repository (e.g., <a href="github.com/rossdahlke/git-training">github.com/rossdahlke/git-training</a>)</p></li>
+<li><p>If you do not have the repository downloaded on your local computer, click on the “Code” dropdown</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="/images/code_button.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Code Button</figcaption><p></p>
+</figure>
+</div></li>
+<li><p>Click on “SSH” and copy the git address (e.g., “git@github.com:rossdahlke/git-training.git”)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="/images/ssh.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">ssh</figcaption><p></p>
+</figure>
+</div></li>
+<li><p>Open your terminal on your local computer or IDE</p></li>
+<li><p>Use <code>ls</code> and <code>cd</code> to navigate to the folder that you want the repository to live in</p></li>
+<li><p>In the terminal use the <code>git clone</code> function to “clone” the repository down to your local machine</p>
+<ol type="1">
+<li>e.g., <code>git clone git@github.com:rossdahlke/git-training.git</code></li>
+</ol></li>
+<li><p>Now, that repository should exist on your local computer</p></li>
+<li><p>Make any changes you want your want to the code</p></li>
+</ol>
+</section>
+<section id="sending-a-repository-back-up" class="level3">
+<h3 class="anchored" data-anchor-id="sending-a-repository-back-up">Sending a repository back up</h3>
+<ol type="1">
+<li>Once you’ve made the changes you want to the file, you can “commit” and “push” those changes back up to GitHub</li>
+<li>Open your terminal on your local computer or use the terminal in your IDE</li>
+<li>Use <code>ls</code> and <code>cd</code> to navigate to your Git repository</li>
+<li>Check on the status of the files in your repository using the <code>git status</code> command
+<ol type="1">
+<li>Files in red are new/ edited files that are currently untracked</li>
+<li>Files in green are new/ edited files that are being tracked</li>
+</ol></li>
+<li>Add the files you wish to “commit” up using the <code>git add</code> function
+<ol type="1">
+<li>e.g., <code>git add training.html</code></li>
+</ol></li>
+<li>You can check on the status of your files again using <code>git status</code>, notice that the files you just added should be green now</li>
+<li>Commit the changes you made using the <code>git commit -m</code> command followed by a message in quotes (e.g., <code>git commit -m "first commit"</code>)</li>
+<li>Push your changes back to GitHub using the <code>git push</code> command</li>
+<li>Check on GitHub to make sure your changes are there</li>
+<li>Now, other people can go and <code>git clone</code> your files and push them back</li>
+</ol>
+<p><strong>Just remember the steps of “add, commit, push”!</strong></p>
+</section>
+<section id="getting-updates-to-a-repository-that-someone-else-pushed" class="level3">
+<h3 class="anchored" data-anchor-id="getting-updates-to-a-repository-that-someone-else-pushed">Getting updates to a repository that someone else pushed</h3>
+<ol type="1">
+<li>If you already have a repository cloned onto your local computer and want to get the latest version of the repo (i.e., after someone else pushed up their changes) use the <code>git pull</code> command</li>
 </ol>
 </section>
 </section>
