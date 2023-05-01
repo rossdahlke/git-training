@@ -41,7 +41,7 @@ There are a variety of Git "clients" out there, including GitHub, GitKraken, Bit
 
     4.  Enter secure passphrase (or click enter for none)
 
-    5.  Use the command `cat .ssh/id_rsa.pub` to show your public key
+    5.  Use the command `cat .ssh/id_ed25519.pub` to show your public key
 
     6.  Copy that key to your clipboard
 

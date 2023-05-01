@@ -149,7 +149,7 @@
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, interior hidden, boxrule=0pt, enhanced, breakable, sharp corners, borderline west={3pt}{0pt}{shadecolor}]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, interior hidden, enhanced, frame hidden, breakable, sharp corners, borderline west={3pt}{0pt}{shadecolor}]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -235,8 +235,8 @@ ssh-keygen -t ed25519 -C "your_email@example.com"
   \item
     Enter secure passphrase (or click enter for none)
   \item
-    Use the command \texttt{cat\ .ssh/id\_rsa.pub} to show your public
-    key
+    Use the command \texttt{cat\ .ssh/id\_ed25519.pub} to show your
+    public key
   \item
     Copy that key to your clipboard
   \item
