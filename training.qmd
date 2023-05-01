@@ -1,7 +1,9 @@
 ---
 title: "Git Training"
 author: "Ross Dahlke"
-format: 
+format:
+  html:
+    toc: true    
   pdf:
     toc: true
 editor: visual
@@ -33,9 +35,7 @@ There are a variety of Git "clients" out there, including GitHub, GitKraken, Bit
 
     2.  If you do not, use the command
 
-        ```         
-        ssh-keygen -t ed25519 -C "your_email@example.com"
-        ```
+            ssh-keygen -t ed25519 -C "your_email@example.com"
 
     3.  Press enter to use the default location
 
@@ -49,19 +49,19 @@ There are a variety of Git "clients" out there, including GitHub, GitKraken, Bit
 
     8.  Click on settings
 
-        ![settings](/images/settings.png){width=30%}
+        ![settings](images/settings.png){width="30%"}
 
     9.  Select SSH and GPG keys
 
-        ![ssh keys button](/images/ssh keys.png){width=40%}
+        ![ssh keys button](images/ssh%20keys.png){width="40%"}
 
     10. Click New SSH Key
 
-        ![new ssh key](/images/new ssh key.png)
+        ![new ssh key](images/new%20ssh%20key.png)
 
     11. Give your key a title
 
-        ![ssh fields](/images/new ssh key.png)
+        ![ssh fields](images/new%20ssh%20key.png)
 
     12. Paste your public key into the Key field
 
@@ -73,7 +73,7 @@ There are a variety of Git "clients" out there, including GitHub, GitKraken, Bit
 
 2.  On the left menu "Top Repositories" click the "New" button
 
-    ![Create a new repository](/images/new_repo.png){width=50%}
+    ![Create a new repository](images/new_repo.png){width="50%"}
 
 3.  Give your repository a name and fill out the remaining details
 
@@ -85,11 +85,11 @@ There are a variety of Git "clients" out there, including GitHub, GitKraken, Bit
 
 2.  If you do not have the repository downloaded on your local computer, click on the "Code" dropdown
 
-    ![Code Button](/images/code_button.png)
+    ![Code Button](images/code_button.png)
 
 3.  Click on "SSH" and copy the git address (e.g., "git\@github.com:rossdahlke/git-training.git")
 
-    ![ssh](/images/ssh.png)
+    ![ssh](images/ssh.png)
 
 4.  Open your terminal on your local computer or IDE
 
